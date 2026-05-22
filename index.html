@@ -1,4 +1,17 @@
-window.testData = {
-  title: "成功",
-  message: "SPO script読込成功"
-};
+<!doctype html>
+<html lang="ja">
+<body style="background:#111;color:#fff;font-size:40px;">
+
+<div id="result">loading...</div>
+
+<script src="https://digitalgojp.sharepoint.com/sites/NTA_IBHub12/SiteAssets/test.js"></script>
+
+<script>
+setTimeout(function () {
+  document.getElementById("result").innerText =
+    window.testData ? window.testData.message : "読めなかった";
+}, 1000);
+</script>
+
+</body>
+</html>
