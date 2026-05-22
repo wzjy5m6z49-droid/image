@@ -1,27 +1,4 @@
-<!doctype html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8" />
-</head>
-<body>
-  <div id="result">読み込み中...</div>
-
-  <script>
-    fetch("https://digitalgojp.sharepoint.com/sites/NTA_IBHub12/SiteCollectionImages/test.json", {
-      credentials: "include"
-    })
-      .then(r => {
-        document.getElementById("result").textContent =
-          "status: " + r.status;
-        return r.text();
-      })
-      .then(t => {
-        document.getElementById("result").textContent += "\n" + t;
-      })
-      .catch(e => {
-        document.getElementById("result").textContent =
-          "ERROR: " + e.message;
-      });
-  </script>
-</body>
-</html>
+window.testData = {
+  title: "成功",
+  message: "SPO script読込成功"
+};
